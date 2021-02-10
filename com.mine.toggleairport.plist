@@ -8,6 +8,7 @@
   <true/>
   <key>ProgramArguments</key>
   <array>
+    <string>/usr/local/bin/xpc_set_event_stream_handler</string>
     <string>/Library/Scripts/toggleAirport.sh</string>
   </array>
   <key>WatchPaths</key>
@@ -16,5 +17,20 @@
     <string>/Library/Preferences/SystemConfiguration/NetworkInterfaces.plist</string>
     <string>/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist</string>
   </array>
+  <key>LaunchEvents</key>
+  <dict>
+    <key>com.apple.iokit.matching</key>
+    <dict>
+      <key>com.apple.device-attach</key>
+        <dict>
+          <key>kUSBProductString</key>
+          <integer>USB 10/100/1000 LAN</integer>
+          <key>IOMatchLaunchStream</key>
+          <true/>
+          <key>IOMatchStream</key>
+          <true/>                            
+        </dict>
+    </dict>
+  </dict>  
 </dict>
 </plist>
